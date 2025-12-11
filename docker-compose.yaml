@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  leads_api:
+    build: .
+    container_name: leads_api
+    volumes:
+      - ./:/app
+      - leads_db_data:/app/db
+    ports:
+      - "8000:8000"
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+volumes:
+  leads_db_data:
+    driver: local

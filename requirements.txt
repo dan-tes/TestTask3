@@ -1,6 +1,8 @@
 fastapi
 uvicorn
-sqlalchemy
+SQLAlchemy
 asyncpg
-python-dotenv
 alembic
+pydantic
+typing_extensions
+aiosqlite
